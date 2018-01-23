@@ -37,7 +37,6 @@ public class CubeController : MonoBehaviour {
         {
             Cursor.lockState = CursorLockMode.None;
         }
-
     }
     public void OnCollisionEnter(Collision collision)
     {
