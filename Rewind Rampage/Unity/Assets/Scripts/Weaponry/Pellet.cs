@@ -15,7 +15,7 @@ public class Pellet : MonoBehaviour {
         }
         if (collision.transform.tag == "EnemyHead")
         {
-            GameObject b = Instantiate(bloedParticle, collision.contacts[0].point, transform.rotation);
+            Instantiate(bloedParticle, collision.contacts[0].point, transform.rotation);
             collision.transform.parent.gameObject.GetComponent<MyHp>().DeathVoid(damage * 2);
         }
         if (collision.transform)

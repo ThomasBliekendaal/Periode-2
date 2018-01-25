@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67fdf8fc861800c469030bd9fcdcf8e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 4
   bloedParticle: {fileID: 1743548753966002, guid: 5f2c0fd6d4fc65d4bba7e9d7a70b7d5a,
     type: 2}
 --- !u!135 &135042063553673102

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHp : MonoBehaviour {
-    public int hp;
+public class LookAtMe : MonoBehaviour {
+    public Transform target;
 	// Use this for initialization
 	void Start () {
 		
@@ -11,14 +11,6 @@ public class PlayerHp : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        transform.LookAt(target);
 	}
-    public void DeathVoid(int pain)
-    {
-        hp -= pain;
-        if (hp < 0)
-        {
-         
-        }
-    }
 }

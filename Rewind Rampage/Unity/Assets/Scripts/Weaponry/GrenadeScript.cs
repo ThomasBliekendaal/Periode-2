@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHp : MonoBehaviour {
-    public int hp;
+public class GrenadeScript : MonoBehaviour {
+    public Transform hand;
+    public float rof;
+    public float rofBackup;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -13,12 +16,4 @@ public class PlayerHp : MonoBehaviour {
 	void Update () {
 		
 	}
-    public void DeathVoid(int pain)
-    {
-        hp -= pain;
-        if (hp < 0)
-        {
-         
-        }
-    }
 }
