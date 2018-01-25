@@ -19,6 +19,7 @@ public class ShootShit : MonoBehaviour {
     public GameObject muurPuff;
     public GameObject muurPuffParticle;
     public Transform rayPoint;
+    public int damage;
 
 	void Update () {
         if (firing == false)
@@ -46,7 +47,7 @@ public class ShootShit : MonoBehaviour {
                     if (hit.transform.tag == "Enemy")
                     {
                         GameObject b = Instantiate(bloed, hit.point, Quaternion.FromToRotation(Vector3.forward, hit.normal));
-                        hit.transform.parent.gameObject.GetComponent<MyHp>().DeathVoid(20);
+                        hit.transform.parent.gameObject.GetComponent<MyHp>().DeathVoid(damage);
                         Destroy(b, 6);
                         GameObject bp = Instantiate(bloedParticle, hit.point, Quaternion.FromToRotation(Vector3.forward, hit.normal));
                         b.transform.SetParent(hit.transform);
@@ -67,7 +68,7 @@ public class ShootShit : MonoBehaviour {
                     if (hit.transform.tag == "EnemyHead")
                     {
                         GameObject b = Instantiate(bloed, hit.point, Quaternion.FromToRotation(Vector3.forward, hit.normal));
-                        hit.transform.parent.gameObject.GetComponent<MyHp>().DeathVoid(40);
+                        hit.transform.parent.gameObject.GetComponent<MyHp>().DeathVoid(damage * 2);
                         Destroy(b, 6);
                         GameObject bp = Instantiate(bloedParticle, hit.point, Quaternion.FromToRotation(Vector3.forward, hit.normal));
                         b.transform.SetParent(hit.transform);

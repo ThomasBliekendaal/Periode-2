@@ -9,8 +9,11 @@ public class ShotgunScript : MonoBehaviour {
     public GameObject pellet;
     public Transform barrel;
     List<Quaternion> pellets;
+    public float rof;
+    public float rofBackup;
 
 	void Awake () {
+        rofBackup = rof;
         pellets = new List<Quaternion>(pelletCount);
         for (int i = 0; i < pelletCount; i++)
         {
@@ -21,9 +24,16 @@ public class ShotgunScript : MonoBehaviour {
 
 	void Update ()
     {
+        rof -= Time.deltaTime;
         if (Input.GetButtonDown("Fire1"))
         {
-            fire();
+            {
+                if (rof < 0)
+                {
+                    fire();
+                    rof = rofBackup;
+                }
+            }
         }
 	}
     void fire()

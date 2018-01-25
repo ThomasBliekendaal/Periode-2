@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - EnemyHead
   - CastleWalls
+  - HoutMuur
+  - Pellet
   layers:
   - Default
   - TransparentFX
@@ -17,8 +19,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Pellet
+  - Player
   - 
   - 
   - 

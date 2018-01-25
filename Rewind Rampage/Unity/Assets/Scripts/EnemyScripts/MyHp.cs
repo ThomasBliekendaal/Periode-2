@@ -5,6 +5,7 @@ using UnityEngine;
 public class MyHp : MonoBehaviour {
     public int health;
     public GameObject explo;
+    public bool dead;
 
     public List<GameObject> bodyParts = new List<GameObject>();
 
@@ -21,6 +22,7 @@ public class MyHp : MonoBehaviour {
         health -= pain;
         if (health < 0)
         {
+            dead = true;
             //GameObject b = Instantiate(explo, transform.position, Quaternion.identity);
             health = 0;
             //transform.gameObject.GetComponent<JumboManajer>().destroy(0);

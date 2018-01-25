@@ -9,45 +9,44 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1442891454792608}
+  m_RootGameObject: {fileID: 1345355285430600}
   m_IsPrefabParent: 1
---- !u!1 &1442891454792608
+--- !u!1 &1345355285430600
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4257265655937392}
-  - component: {fileID: 33767339644823718}
-  - component: {fileID: 23793692740039414}
-  - component: {fileID: 65253304170145192}
+  - component: {fileID: 4434259877887258}
+  - component: {fileID: 33013232419898338}
+  - component: {fileID: 23007483115894672}
   m_Layer: 0
-  m_Name: viezedeur
+  m_Name: gunballmagazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4257265655937392
+--- !u!4 &4434259877887258
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1442891454792608}
-  m_LocalRotation: {x: -0.55834556, y: -0.4338782, z: -0.4338782, w: 0.55834556}
-  m_LocalPosition: {x: 172.13, y: 269.56, z: 215.66}
+  m_GameObject: {fileID: 1345355285430600}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 154.79521, y: 269.10303, z: 135.50693}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: -75.7, z: 0}
---- !u!23 &23793692740039414
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23007483115894672
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1442891454792608}
+  m_GameObject: {fileID: 1345355285430600}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -55,7 +54,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c74c939ff4e7a864980dcda76879e33a, type: 2}
+  - {fileID: 2100000, guid: ca08ef34cc2d4d144a40dc5c89ca14f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -74,22 +73,10 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33767339644823718
+--- !u!33 &33013232419898338
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1442891454792608}
-  m_Mesh: {fileID: 4300000, guid: b58fbf743f6c25c468ed02db6bdd1a0e, type: 3}
---- !u!65 &65253304170145192
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1442891454792608}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0000026, y: 6.323685, z: 6.855}
-  m_Center: {x: 0.49999967, y: 0.28331086, z: 2.8732076}
+  m_GameObject: {fileID: 1345355285430600}
+  m_Mesh: {fileID: 4300000, guid: 487c78e590a369c469da1eebc1b4db7a, type: 3}
