@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  despawn: 10
 --- !u!135 &135911511868408702
 SphereCollider:
   m_ObjectHideFlags: 1
