@@ -13,7 +13,8 @@ public class BowmanBow : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rofBackup = rof;
-	}
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 	
 	// Update is called once per frame
 	void Update () {

@@ -10,6 +10,7 @@ TagManager:
   - CastleWalls
   - HoutMuur
   - Pellet
+  - Barrier
   layers:
   - Default
   - TransparentFX

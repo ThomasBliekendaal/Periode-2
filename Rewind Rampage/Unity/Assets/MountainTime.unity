@@ -1111,6 +1111,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8718f7ee6bb3ff445802de43568d4813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hand: {fileID: 807216632}
+  rof: 0
+  rofBackup: 0
+  nade: {fileID: 1530055481589706, guid: f7e0d397aa37bd3418bd1c355b51eced, type: 2}
+  nadeVel: 500
 --- !u!1001 &811883021
 Prefab:
   m_ObjectHideFlags: 0
@@ -2353,6 +2358,7 @@ MonoBehaviour:
   spawnTimer: 3
   backupTimer: 0
   survivalTimer: 60
+  barrier: {fileID: 0}
 --- !u!4 &1589182810
 Transform:
   m_ObjectHideFlags: 0
@@ -2364,7 +2370,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1700953534
 GameObject:
@@ -2776,7 +2782,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4455812872700918, guid: 24dadb80064e6564fa927e572d7e3812, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24dadb80064e6564fa927e572d7e3812, type: 2}
@@ -2851,7 +2857,7 @@ GameObject:
   - component: {fileID: 1829494119}
   m_Layer: 0
   m_Name: MagicBarrier
-  m_TagString: Untagged
+  m_TagString: Barrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2967,7 +2973,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 2046577042
+  randomSeed: 1682242094
   InitialModule:
     serializedVersion: 3
     enabled: 1

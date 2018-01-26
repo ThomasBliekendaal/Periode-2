@@ -8,10 +8,12 @@ public class Spawns : MonoBehaviour {
     public float spawnTimer;
     public float backupTimer;
     public float survivalTimer;
+    public GameObject barrier;
 	// Use this for initialization
 	void Start () {
         backupTimer = spawnTimer;
-	}
+        barrier = GameObject.FindGameObjectWithTag("Barrier");
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -21,6 +23,11 @@ public class Spawns : MonoBehaviour {
         {
             spawnEnemyAtRandom();
             spawnTimer = backupTimer;
+        }
+        if (survivalTimer < 0)
+        {
+            Destroy(barrier);
+            gameObject.SetActive(false);
         }
 	}
     public void spawnEnemyAtRandom ()

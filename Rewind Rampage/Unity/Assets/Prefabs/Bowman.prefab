@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 114054247774794774}
   - component: {fileID: 114632597937504378}
   - component: {fileID: 195013770877917760}
+  - component: {fileID: 65764540960667022}
   m_Layer: 0
   m_Name: Bowman
   m_TagString: Enemy
@@ -369,6 +370,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.59999996, z: 1.11}
   m_Center: {x: -0.000000014901161, y: -0.000000029802319, z: 0.28}
+--- !u!65 &65764540960667022
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1218229871842424}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
+  m_Center: {x: 0, y: 0.81, z: 0}
 --- !u!114 &114054247774794774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -397,7 +410,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d37164cbf416a4aa4328bf6f3bf627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayPoint: {fileID: 0}
   bow: {fileID: 1508550823822634}
 --- !u!114 &114708810133643130
 MonoBehaviour:
@@ -410,7 +422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100d74675d208dc4babe448dac73c76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rof: 1
+  rof: 2
   rofBackup: 0
   bowBarrel: {fileID: 4929798700482874}
   Arrow: {fileID: 1345355285430600, guid: f927f4b3d057a2e41b44a0850f582b0b, type: 2}

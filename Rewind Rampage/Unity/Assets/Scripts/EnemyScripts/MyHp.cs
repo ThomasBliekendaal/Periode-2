@@ -31,6 +31,7 @@ public class MyHp : MonoBehaviour {
             for (int  i = 0; i < bodyParts.Count; i++)
             {
                 bodyParts[i].GetComponent<Rigidbody>().isKinematic = false;
+                bodyParts[i].GetComponent<Rigidbody>().WakeUp();
             }
         }
     }

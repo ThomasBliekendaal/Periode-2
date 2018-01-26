@@ -8,7 +8,6 @@ public class BowmanScript : MonoBehaviour
     private NavMeshAgent agent;
     private Transform target;
     public RaycastHit hit;
-    public Transform rayPoint;
     public GameObject bow;
 
     // Use this for initialization
