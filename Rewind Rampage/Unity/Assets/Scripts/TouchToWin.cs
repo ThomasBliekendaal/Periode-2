@@ -29,6 +29,9 @@ public class TouchToWin : MonoBehaviour {
     }
     public void OnCollisionEnter(Collision collision)
     {
+        if (collision.transform.tag == "Player")
+        {
         win = true;
+        }
     }
 }
