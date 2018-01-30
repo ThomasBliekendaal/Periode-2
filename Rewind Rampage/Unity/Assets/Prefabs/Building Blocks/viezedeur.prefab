@@ -21,10 +21,11 @@ GameObject:
   - component: {fileID: 4257265655937392}
   - component: {fileID: 33767339644823718}
   - component: {fileID: 23793692740039414}
+  - component: {fileID: 114407436678413492}
   - component: {fileID: 65253304170145192}
   m_Layer: 0
   m_Name: viezedeur
-  m_TagString: Untagged
+  m_TagString: HoutMuur
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1442891454792608}
   m_LocalRotation: {x: -0.55834556, y: -0.4338782, z: -0.4338782, w: 0.55834556}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 172.13, y: 269.56, z: 215.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -93,3 +94,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0000026, y: 6.323685, z: 6.855}
   m_Center: {x: 0.49999967, y: 0.28331086, z: 2.8732076}
+--- !u!114 &114407436678413492
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1442891454792608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ee6efa700968e40ad351e04f330f7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  win: 0
+  restart: {fileID: 0}
+  quit: {fileID: 0}
+  congratulations: {fileID: 0}

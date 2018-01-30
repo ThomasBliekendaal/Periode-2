@@ -14,5 +14,9 @@ public class UiGrenade : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         text.text = grenade.GetComponent<GrenadeScript>().rof.ToString();
+        if (grenade.GetComponent<GrenadeScript>().rof == 0)
+        {
+            text.text = ("READY");
+        }
 	}
 }
