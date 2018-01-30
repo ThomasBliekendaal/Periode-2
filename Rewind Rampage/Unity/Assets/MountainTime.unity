@@ -223,6 +223,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 20307337}
+--- !u!1 &20912437 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1442891454792608, guid: d492cbc6582a2e94a8bdb45dda610f42,
+    type: 2}
+  m_PrefabInternal: {fileID: 1609533879}
 --- !u!1 &49277517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2025,6 +2030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1005779465}
+  deur: {fileID: 20912437}
 --- !u!1001 &1026156697
 Prefab:
   m_ObjectHideFlags: 0
@@ -3338,6 +3344,59 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1616679323}
+--- !u!1 &1663109108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1663109110}
+  - component: {fileID: 1663109109}
+  - component: {fileID: 1663109111}
+  m_Layer: 0
+  m_Name: KillYou
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1663109109
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1663109108}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1000, y: 29.2, z: 1000}
+  m_Center: {x: 258.8, y: -9.1, z: 255.27}
+--- !u!4 &1663109110
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1663109108}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1663109111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1663109108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b1ea421e8e9a804e97ff3c8a820d359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1700953534
 GameObject:
   m_ObjectHideFlags: 0

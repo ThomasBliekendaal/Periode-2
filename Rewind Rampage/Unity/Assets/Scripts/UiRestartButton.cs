@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class UiRestartButton : MonoBehaviour {
     public Button button;
+    public GameObject deur;
 	// Use this for initialization
 	void Start () {
         Button btn = button.GetComponent<Button>();
@@ -15,5 +16,6 @@ public class UiRestartButton : MonoBehaviour {
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
+        deur.GetComponent<TouchToWin>().win = false;
     }
 }
