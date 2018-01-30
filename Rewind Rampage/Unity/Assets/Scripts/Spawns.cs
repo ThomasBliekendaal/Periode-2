@@ -9,6 +9,7 @@ public class Spawns : MonoBehaviour {
     public float backupTimer;
     public float survivalTimer;
     public GameObject barrier;
+    public bool isDivided = false;
 	// Use this for initialization
 	void Start () {
         backupTimer = spawnTimer;
@@ -23,6 +24,11 @@ public class Spawns : MonoBehaviour {
         {
             spawnEnemyAtRandom();
             spawnTimer = backupTimer;
+        }
+        if (survivalTimer < 30 && isDivided == false)
+        {
+            backupTimer = backupTimer / 2;
+            isDivided = true;
         }
         if (survivalTimer < 0)
         {

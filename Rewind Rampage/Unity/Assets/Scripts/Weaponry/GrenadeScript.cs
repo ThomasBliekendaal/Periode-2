@@ -16,7 +16,11 @@ public class GrenadeScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         rof -= Time.deltaTime;
-        if (rof < 0)
+        if (rof < 0f)
+        {
+            rof = 0f;
+        }
+        if (rof == 0f)
         {
             if (Input.GetButtonDown("G"))
             {
