@@ -8,6 +8,8 @@ public class TouchToWin : MonoBehaviour {
     public GameObject quit;
     public GameObject congratulations;
     public List<GameObject> canvasTrash2 = new List<GameObject>();
+    public AudioSource source;
+    public AudioClip victory;
 
     void Start () {
 		
@@ -21,6 +23,8 @@ public class TouchToWin : MonoBehaviour {
             congratulations.SetActive(true);
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
+            source.Stop();
+            source.PlayOneShot(victory, 1);
             for (int i = 0; i < canvasTrash2.Count; i++)
             {
                 canvasTrash2[i].SetActive(false);
@@ -31,7 +35,7 @@ public class TouchToWin : MonoBehaviour {
     {
         if (collision.transform.tag == "Player")
         {
-        win = true;
+            win = true;
         }
     }
 }

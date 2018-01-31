@@ -10,10 +10,15 @@ public class Spawns : MonoBehaviour {
     public float survivalTimer;
     public GameObject barrier;
     public bool isDivided = false;
+    public AudioSource source;
+    public AudioClip startTune;
+    public AudioClip endTune;
 	// Use this for initialization
 	void Start () {
         backupTimer = spawnTimer;
         barrier = GameObject.FindGameObjectWithTag("Barrier");
+        source.PlayOneShot(startTune, 1);
+
     }
 	
 	// Update is called once per frame
@@ -25,7 +30,7 @@ public class Spawns : MonoBehaviour {
             spawnEnemyAtRandom();
             spawnTimer = backupTimer;
         }
-        if (survivalTimer < 30 && isDivided == false)
+        if (survivalTimer < 45 && isDivided == false)
         {
             backupTimer = backupTimer / 2;
             isDivided = true;
@@ -34,6 +39,7 @@ public class Spawns : MonoBehaviour {
         {
             Destroy(barrier);
             gameObject.SetActive(false);
+            source.PlayOneShot(endTune, 1);
         }
 	}
     public void spawnEnemyAtRandom ()

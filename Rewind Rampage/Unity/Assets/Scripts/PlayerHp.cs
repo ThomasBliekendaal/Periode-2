@@ -9,6 +9,8 @@ public class PlayerHp : MonoBehaviour {
     public GameObject quitButton;
     public GameObject salutations;
     public List<GameObject> canvasTrash = new List<GameObject>();
+    public AudioSource source;
+    public AudioClip failure;
 	// Use this for initialization
 	void Start () {
 		
@@ -32,6 +34,8 @@ public class PlayerHp : MonoBehaviour {
             quitButton.SetActive(true);
             salutations.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
+            source.Stop();
+            source.PlayOneShot(failure, 1);
             for (int i = 0; i < canvasTrash.Count; i++)
             {
                 canvasTrash[i].SetActive(false);

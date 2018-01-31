@@ -11,17 +11,23 @@ public class EnemyScript : MonoBehaviour {
     public RaycastHit hit;
     public Transform rayPoint;
     public GameObject weapon;
+    public AudioSource source;
+    public List<AudioClip> kreunen = new List<AudioClip>();
+    public bool died = false;
+    public float vol;
+    public float tauntTimer;
+    public List<AudioClip> taunts = new List<AudioClip>();
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         agent = this.GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        timer = backupTimer;
     }
 	
 	// Update is called once per frame
 	void Update () {
         timer -= Time.deltaTime;
+        tauntTimer -= Time.deltaTime;
         if (timer <= 0)
         {
             if (Physics.Raycast(rayPoint.position, rayPoint.forward, out hit, 1f))
@@ -33,12 +39,29 @@ public class EnemyScript : MonoBehaviour {
                 }
             }
         }
+        if(tauntTimer <= 0 && !died)
+        {
+            taunt();
+            tauntTimer = Random.Range(1, 3);
+        }
         Debug.DrawRay(rayPoint.position, rayPoint.forward * 1, Color.green);
         bool dead = transform.gameObject.GetComponent<MyHp>().dead;
         agent.SetDestination(target.position);
-        if(dead == true)
+        if(dead == true && !died)
         {
             agent.isStopped=true;
+            died = true;
+            kreun();
         }
+    }
+    void kreun()
+    {
+        int kreunNo = Random.Range(0, kreunen.Count);
+        source.PlayOneShot(kreunen[kreunNo], vol);
+    }
+    void taunt()
+    {
+        int tauntNo = Random.Range(0, taunts.Count);
+        source.PlayOneShot(taunts[tauntNo], vol);
     }
 }
