@@ -111,7 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 3
   timerBackup: 3
-  particle: {fileID: 1743548753966002, guid: 5f2c0fd6d4fc65d4bba7e9d7a70b7d5a, type: 2}
+  particle: {fileID: 1087360723578686, guid: ad09bb7c1e6aeb04994a5668198f060e, type: 2}
   radius: 5
   force: 600
   damage: 110

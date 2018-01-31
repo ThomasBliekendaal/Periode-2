@@ -22,7 +22,8 @@ public class OnGrenade : MonoBehaviour {
     }
     void Explode()
     {
-        Instantiate(particle, transform.position, transform.rotation);
+        GameObject g = Instantiate(particle, transform.position, transform.rotation);
+        Destroy(g, 1);
         Collider[] enemies = Physics.OverlapSphere(transform.position, radius);
         foreach(Collider nearbyObject in enemies)
         {

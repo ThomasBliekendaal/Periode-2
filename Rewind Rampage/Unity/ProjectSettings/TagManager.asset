@@ -12,6 +12,7 @@ TagManager:
   - Pellet
   - Barrier
   - RestartButton
+  - Arrow
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - Arrow
   - Bow
   - Grenade
-  - 
+  - Enemy
   - 
   - 
   - 

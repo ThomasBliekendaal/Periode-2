@@ -6,12 +6,13 @@ public class MyHp : MonoBehaviour {
     public int health;
     public GameObject explo;
     public bool dead;
+    private Collider colidar;
 
     public List<GameObject> bodyParts = new List<GameObject>();
 
 	// Use this for initialization
 	void Start () {
-		
+        colidar = GetComponent<BoxCollider>();
 	}
 	
 	// Update is called once per frame
@@ -28,6 +29,7 @@ public class MyHp : MonoBehaviour {
             //transform.gameObject.GetComponent<JumboManajer>().destroy(0);
             //Destroy(b, 3);
             //Destroy(gameObject);
+            colidar.enabled = !colidar.enabled;
             for (int  i = 0; i < bodyParts.Count; i++)
             {
                 bodyParts[i].GetComponent<Rigidbody>().isKinematic = false;

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Arrow : MonoBehaviour {
     public int damage;
     public float despawn;
+    public GameObject burstParticle;
 	// Use this for initialization
 	void Start () {
 		
@@ -22,13 +23,11 @@ public class Arrow : MonoBehaviour {
     {
         if (collision.transform)
         {
-            gameObject.GetComponent<Rigidbody>().isKinematic = true;
-            gameObject.GetComponent<SphereCollider>().isTrigger = true;
+            Destroy(gameObject);
         }
         if (collision.transform.tag == "Player")
         {
             collision.transform.gameObject.GetComponent<PlayerHp>().DeathVoid(damage);
-            Destroy(gameObject);
         }
     }
 }
