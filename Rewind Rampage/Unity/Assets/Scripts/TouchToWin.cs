@@ -10,6 +10,7 @@ public class TouchToWin : MonoBehaviour {
     public List<GameObject> canvasTrash2 = new List<GameObject>();
     public AudioSource source;
     public AudioClip victory;
+    public bool failSafe = false;
 
     void Start () {
 		
@@ -23,11 +24,15 @@ public class TouchToWin : MonoBehaviour {
             congratulations.SetActive(true);
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
-            source.Stop();
-            source.PlayOneShot(victory, 1);
             for (int i = 0; i < canvasTrash2.Count; i++)
             {
                 canvasTrash2[i].SetActive(false);
+            }
+            if (!failSafe)
+            {
+                source.Stop();
+                source.PlayOneShot(victory, 1);
+                failSafe = true;
             }
         }
     }

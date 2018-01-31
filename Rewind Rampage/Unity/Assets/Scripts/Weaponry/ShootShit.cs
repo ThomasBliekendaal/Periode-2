@@ -22,6 +22,10 @@ public class ShootShit : MonoBehaviour {
     public int damage;
     public GameObject houtPuff;
     public GameObject houtPuffParticle;
+    public AudioSource source;
+    public AudioClip shot;
+    public AudioClip bImpact;
+
 	void Update () {
         if (firing == false)
         {
@@ -43,6 +47,7 @@ public class ShootShit : MonoBehaviour {
                 rofTime = rof;
                 GameObject mf = Instantiate(muzzleFlash, barrel.transform);
                 Destroy(mf, 1);
+                source.PlayOneShot(shot, 1);
                 if (Physics.Raycast(rayPoint.position, rayPoint.forward, out hit, 1000f))
                 {
                     if (hit.transform.tag == "Enemy")
@@ -53,6 +58,7 @@ public class ShootShit : MonoBehaviour {
                         GameObject bp = Instantiate(bloedParticle, hit.point, Quaternion.FromToRotation(Vector3.forward, hit.normal));
                         b.transform.SetParent(hit.transform);
                         Destroy(bp, 1);
+                        source.PlayOneShot(bImpact, 1);
                         if (hit.rigidbody != null)
                         {
                             hit.rigidbody.AddForce(-hit.normal * impact);
@@ -74,6 +80,7 @@ public class ShootShit : MonoBehaviour {
                         GameObject bp = Instantiate(bloedParticle, hit.point, Quaternion.FromToRotation(Vector3.forward, hit.normal));
                         b.transform.SetParent(hit.transform);
                         Destroy(bp, 1);
+                        source.PlayOneShot(bImpact, 1);
                         if (hit.rigidbody != null)
                         {
                             hit.rigidbody.AddForce(-hit.normal * impact);

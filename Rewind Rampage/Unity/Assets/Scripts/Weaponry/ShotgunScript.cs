@@ -11,6 +11,11 @@ public class ShotgunScript : MonoBehaviour {
     List<Quaternion> pellets;
     public float rof;
     public float rofBackup;
+    public AudioSource source;
+    public AudioClip shot;
+    public AudioClip pump;
+    private float pumpTime = 1;
+    private bool reloaded = false;
 
 	void Awake () {
         rofBackup = rof;
@@ -25,13 +30,22 @@ public class ShotgunScript : MonoBehaviour {
 	void Update ()
     {
         rof -= Time.deltaTime;
+        if(rof <= 0.3 && !reloaded)
+        {
+            source.PlayOneShot(pump, 1);
+            reloaded = true;
+        }
         if (Input.GetButtonDown("Fire1"))
         {
             {
+                pumpTime -= Time.deltaTime;
                 if (rof < 0)
                 {
                     fire();
+                    source.PlayOneShot(shot, 1);
                     rof = rofBackup;
+                    pumpTime = 1;
+                    reloaded = false;
                 }
             }
         }
