@@ -149,6 +149,9 @@ MonoBehaviour:
     type: 2}
   rayPoint: {fileID: 1370691451}
   damage: 15
+  houtPuff: {fileID: 1636224145134468, guid: a5d21bbb315560b4d8728b8f8ec74e75, type: 2}
+  houtPuffParticle: {fileID: 1308179423619404, guid: e6c9bfff324149746ba559bde7c5f95c,
+    type: 2}
 --- !u!1 &20307337
 GameObject:
   m_ObjectHideFlags: 0

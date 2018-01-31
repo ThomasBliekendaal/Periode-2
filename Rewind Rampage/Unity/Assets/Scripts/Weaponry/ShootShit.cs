@@ -20,7 +20,8 @@ public class ShootShit : MonoBehaviour {
     public GameObject muurPuffParticle;
     public Transform rayPoint;
     public int damage;
-
+    public GameObject houtPuff;
+    public GameObject houtPuffParticle;
 	void Update () {
         if (firing == false)
         {
@@ -84,6 +85,13 @@ public class ShootShit : MonoBehaviour {
                         Destroy(mp, 6);
                         GameObject mpp = Instantiate(muurPuffParticle, hit.point, Quaternion.FromToRotation(Vector3.forward, hit.normal));
                         Destroy(mpp, 1);
+                    }
+                    if (hit.transform.tag == "HoutMuur")
+                    {
+                        GameObject hp = Instantiate(houtPuff, hit.point, Quaternion.FromToRotation(Vector3.forward, hit.normal));
+                        Destroy(hp, 6);
+                        GameObject hpp = Instantiate(houtPuffParticle, hit.point, Quaternion.FromToRotation(Vector3.forward, hit.normal));
+                        Destroy(hpp, 1);
                     }
                 }
             }
